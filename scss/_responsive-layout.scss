@@ -1,0 +1,88 @@
+@import 'variables-and-mixins';
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.center-wrapper{
+    margin: 0 auto;
+    width: 315px;
+}
+
+.header{
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%) no-repeat;
+    padding-bottom: 60px;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.content{
+    background-color: $background-color-basic;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+
+.link-content{
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: $font-color-regular;
+    @include section-heading-small;
+    &-sliders{
+        margin-bottom: 0;
+    }
+
+    &-arrow-right{
+        width: 12px;
+        height: 12px;  
+        &-pink{
+            display: none;
+        }
+    }
+
+    &:hover{
+        color: $font-color-hover;
+
+        .link-content-arrow-right{
+            &-blue{
+                display: none;
+            }
+            &-pink{
+                display: inline-block;
+            }
+        }
+
+    }
+}
+
+
+@media(min-width: map-get($screen, "tablet-sd")){
+    .center-wrapper{
+        width: calc(map-get($screen, "tablet-sd") - 120px);
+    }
+    .content{
+        margin-top: 60px;
+    }
+}
+@media(min-width: map-get($screen, "tablet-hd")){
+    .center-wrapper{
+        width: calc(map-get($screen, "tablet-hd") - 120px);
+    }
+}
+@media(min-width:map-get($screen, "desktop-sd")){
+    .center-wrapper{
+        width: calc(map-get($screen, "desktop-sd") - 120px);
+    }
+}
+@media(min-width:map-get($screen, "desktop-hd")){
+    .center-wrapper{
+        width: calc(map-get($screen, "desktop-hd") - 320px);
+    }
+
+}

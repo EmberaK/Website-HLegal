@@ -1,0 +1,105 @@
+@import 'variables-and-mixins';
+
+
+
+.publications{
+    padding-top: 30px;
+    background-color: rgba(245, 245, 250, 1);
+
+    &-wrapper{
+        display: grid;
+        gap: 30px;
+    }
+    &-header{
+        display: grid;
+        gap: 5px;
+    }
+    &-heading{
+        @include section-heading-big;
+        @include gradient-pink-font;
+    }
+
+    &-box{
+        display: grid;
+        gap: 30px;
+        &-item{
+            display: grid;
+            border-radius: 8px, 8px, 0px, 0px;
+            &-details{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 30px;
+                background-color: $background-color-basic;
+                &-heading{
+                    @include inner-section-heading-small;
+                    color: $font-color-regular;
+                    &-small{
+                        @include inner-section-heading-extra-small;
+                        color: $font-color-grey;
+                    }
+                }
+                &-band{
+                    display: grid;
+                    grid-template-rows: 4px;
+                    grid-template-columns: 1fr;
+                    background-color: $font-color-grey-sperator;
+                }
+                &-more{
+                    @include inner-section-paragraph-small;
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media (min-width: map-get($screen, "tablet-sd")) {
+
+    .publications{
+        &-header{
+            gap: 10px;
+        }
+        &-box{
+            grid-template-columns: repeat(2, 1fr); /* Два элемента в ряд на планшете */
+            &-item{
+                display: grid;
+                grid-template-rows: auto auto 1fr; /* Авто-высота для изображения и заголовка, остальное пространство для текста */
+                &-people{
+                    grid-column: 1 / span 2;
+                }
+                &-image{
+                    width: 100%;
+                }
+                &-details {
+                    grid-row: 2 / 4; /* Начинается со второй строки и занимает оставшееся пространство */
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: map-get($screen, "tablet-hd")){
+
+    .publications{
+        &-box{
+            grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Автоматическое распределение элементов в один ряд */
+            &-item{
+                grid-template-columns: 1fr; /* Один столбец */
+                &-people{
+                    grid-column: span 1; /* Занимает one столбца */
+                }
+                &-image{
+                    width: 100%;
+                }
+                &-details {
+                    grid-row: 2 / 4; /* Начинается со второй строки и занимает оставшееся пространство */
+                }
+            }
+        }
+    }
+}
+

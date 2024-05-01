@@ -1,0 +1,199 @@
+@import 'variables-and-mixins';
+
+.trust{
+    &-heading{
+        @include section-heading-small;
+        color: $font-color-trust-heading;
+        display: grid;
+        justify-content: center;
+        margin-bottom: 30px;
+
+    }
+
+    
+
+    &-block{
+        display: grid;
+        grid-template-rows: repeat(6, 120px);
+        grid-template-columns: repeat(1, 1fr);
+
+        &-child{
+            @include grid-center;
+            
+            &:nth-child(n+7){
+                display: none;
+            }
+
+
+            &-hillel{
+                background-color: $background-color-hillel;
+                
+                &-partner{
+                    width: 217px;
+                    height: 48px;   
+                }
+            }
+
+            &-wanna-biz{
+                background-color: $background-color-wanna-biz;
+                
+                &-partner{
+                    width: 199px;
+                    height: 32px;
+                }
+            }
+
+            &-tapgerine{
+                background-color: $background-color-tapgerine;
+
+                &-partner{
+                    width: 179px;
+                    height: 44px;
+                }
+
+            }
+
+            &-3d-look{
+                background-color: $background-color-3d-look;
+
+                &-partner{
+                    width: 180px;
+                    height: 42px;
+
+                }
+            }
+
+            &-orangear{
+                background-color: $background-color-orangear;
+
+                &-partner{
+                    width: 174px;
+                    height: 44px;
+                }
+            }
+
+            &-adtellige{
+                background-color: $background-color-adtellige;
+
+                &-partner{
+                    width: 195px;
+                    height: 48px;
+                }
+            }
+
+            &-clicky{
+                background-color: $background-color-clicky;
+
+                &-partner{
+                    width: 138px;
+                    height: 61px;
+                }
+            }
+
+            &-ec-leasing{
+                background-color: $background-color-ec-leasing;
+
+                &-partner{
+                    width: 146px;
+                    height: 76px;
+                }
+            }
+
+            &-infa-tek{
+                background-color: $background-color-infa-tek;
+
+                &-partner{
+                    width: 182px;
+                    height: 60px;
+                }
+            }
+
+            &-city-park{
+                background-color: $background-color-city-park;
+
+                &-partner{
+                    width: 181px;
+                    height: 38px;
+                }
+            }
+
+            &-art-print{
+                background-color: $background-color-art-print;
+
+                &-partner{
+                    width: 189px;
+                    height: 46px;
+                }
+            }
+
+            &-ultimate-card{
+                background-color: $background-color-ultimate-card;
+
+                &-partner{
+                    width: 152px;
+                    height: 95px;
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: map-get($screen, "tablet-sd")) {
+    
+    .trust{
+        &-block{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 120px);
+            
+            &-child{
+
+                &:nth-child(n+7){
+                    @include grid-center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($screen, "tablet-hd")){
+    
+    .trust{
+        &-block{     
+            grid-template-columns: repeat(4, minmax(300px, 1fr));
+            grid-template-rows: repeat(3, 120px);  
+        }
+    }
+}
+
+@media (min-width: map-get($screen, "desktop-hd")){
+    
+    .trust{
+        padding-bottom: 60px;
+        &-wrapper{
+            width: calc(map-get($screen, "desktop-hd") - 180px);
+            margin: 0 auto;
+        } 
+
+        &-block{
+            // border-radius: 12px;
+            // overflow: hidden;
+            &-child{
+                &-hillel{
+                    border-radius: 12px 0 0 0;
+                }
+                &-3d-look{
+                    border-radius: 0 12px 0 0;
+                }
+                &-infa-tek{
+                    border-radius: 0 0 0 12px;
+                }
+                &-ultimate-card{
+                    border-radius: 0 0 12px 0;
+
+                }
+            }
+        }
+        
+    }
+}    

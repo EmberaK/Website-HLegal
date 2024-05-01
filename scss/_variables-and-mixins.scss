@@ -1,0 +1,137 @@
+@use "sass:map";
+
+// map
+
+$screen: (
+    "mobile": 375px,
+    "tablet-sd": 768px,
+    "tablet-hd": 1024px,
+    "desktop-sd": 1440px,
+    "desktop-hd": 1920px,
+);
+// example
+// @media (min-width: map-get($screen, "mobile"))
+
+// background color
+
+$background-color-basic: rgba(255, 255, 255, 1);
+$background-color-shadow-grey: rgba(202, 202, 219, 1);
+$background-color-shadow-grey-light: rgba(231, 231, 242, 1);
+$background-color-blue-light: rgba(36, 163, 255);
+
+
+
+
+
+// font color
+
+$font-color-regular: rgba(36, 163, 255, 1);
+$font-color-basic: rgba(255, 255, 255, 1);
+$font-color-trust-heading: rgba(50, 50, 100, 1);
+$font-color-hover: rgba(240, 20, 90, 1);
+$font-color-grey: rgba(179, 179, 186, 1);
+$font-color-grey-sperator: rgba(230, 230, 240, 1);
+
+
+
+// partner
+$background-color-hillel: rgba(28, 66, 128, 1);
+$background-color-wanna-biz: rgba(20, 54, 70, 1);
+$background-color-tapgerine: rgba(244, 139, 48, 1);
+$background-color-3d-look: rgba(158, 77, 195, 1);
+$background-color-orangear: rgba(253, 147, 57, 1);
+$background-color-adtellige: rgba(226, 226, 228, 1);
+$background-color-clicky: rgba(199, 28, 54, 1);
+$background-color-ec-leasing: rgba(220, 243, 249, 1);
+$background-color-infa-tek: rgba(234, 234, 234, 1);
+$background-color-city-park: rgba(40, 34, 64, 1);
+$background-color-art-print: rgba(29, 69, 104, 1);
+$background-color-ultimate-card: rgba(0, 0, 0, 1);
+
+
+// mix font
+
+@mixin section-heading-big{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 37px;
+
+}
+
+@mixin section-heading-small{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin inner-section-heading-very-large{
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+@mixin inner-section-heading-large {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+@mixin inner-section-heading-medium {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+@mixin inner-section-heading-small {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+@mixin inner-section-heading-extra-small {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1px;
+}
+
+@mixin inner-section-paragraph-small{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+@mixin gradient-pink-font{
+    background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    background-clip: text; 
+    color: transparent; 
+}
+
+
+
+// position
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+@mixin grid-center{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}

@@ -1,0 +1,91 @@
+@import 'variables-and-mixins';
+
+
+.services{
+
+    &-header {
+        margin-bottom: 30px;
+
+        &-heading{
+            @include section-heading-big;
+            @include gradient-pink-font;
+        }
+
+        }
+
+    &-block {
+        display: grid;
+        justify-content: center;
+        gap: 30px;
+
+        &-child{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &-icon{
+                width: 92px;
+                height: 92px;
+                padding: 14px;
+                border-radius: 24px;
+                background: $background-color-basic;
+
+                img{
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+
+            &-heading{
+                color: $font-color-regular;
+                @include inner-section-heading-large;
+            }
+
+            &-description{            
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                color: $font-color-basic;
+            }
+
+        }
+
+    }
+}
+
+
+
+
+@media(min-width: map-get($screen, "tablet-sd")){
+    .services{
+    
+        &-header {
+            margin-bottom: 60px;
+    
+            &-content{
+                margin-bottom: 10px;
+            }
+    
+            &-heading{
+                font-size: 38px;
+                line-height: 46px;
+            }
+        }
+    
+
+        &-block{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+
+    }
+}
+
+@media(min-width: map-get($screen, "tablet-hd")){
+    .services{
+        &-block{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+}
