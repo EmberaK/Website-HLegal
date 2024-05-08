@@ -171,8 +171,9 @@
     .trust{
         padding-bottom: 60px;
         &-wrapper{
-            width: calc(map-get($screen, "desktop-hd") - 180px);
-            margin: 0 auto;
+            min-width: 1740px;
+            max-width: 100%;
+            margin: 0 100px;
         } 
 
         &-block{

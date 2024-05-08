@@ -59,6 +59,7 @@
         justify-content: center;
         gap: 15px;
         &-item{
+            border: 1px solid transparent;
             border-radius: 90%;
             background-color: $background-color-blue-light;
             opacity: 0.2;

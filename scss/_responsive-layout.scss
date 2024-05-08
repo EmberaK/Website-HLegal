@@ -11,8 +11,9 @@ body{
 }
 
 .center-wrapper{
-    margin: 0 auto;
-    width: 315px;
+    margin: 0 60px;
+    min-width: 315px;
+    max-width: 100%;
 }
 
 .header{
@@ -63,26 +64,23 @@ body{
 
 
 @media(min-width: map-get($screen, "tablet-sd")){
-    .center-wrapper{
-        width: calc(map-get($screen, "tablet-sd") - 120px);
-    }
     .content{
         margin-top: 60px;
     }
 }
-@media(min-width: map-get($screen, "tablet-hd")){
-    .center-wrapper{
-        width: calc(map-get($screen, "tablet-hd") - 120px);
-    }
-}
-@media(min-width:map-get($screen, "desktop-sd")){
-    .center-wrapper{
-        width: calc(map-get($screen, "desktop-sd") - 120px);
-    }
-}
+// @media(min-width: map-get($screen, "tablet-hd")){
+//     .center-wrapper{
+//         width: calc(map-get($screen, "tablet-hd") - 120px);
+//     }
+// }
+// @media(min-width:map-get($screen, "desktop-sd")){
+//     .center-wrapper{
+//         width: calc(map-get($screen, "desktop-sd") - 120px);
+//     }
+// }
 @media(min-width:map-get($screen, "desktop-hd")){
     .center-wrapper{
-        width: calc(map-get($screen, "desktop-hd") - 320px);
+            margin: 0 160px;
     }
 
 }
