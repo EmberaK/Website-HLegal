@@ -68,16 +68,7 @@ body{
         margin-top: 60px;
     }
 }
-// @media(min-width: map-get($screen, "tablet-hd")){
-//     .center-wrapper{
-//         width: calc(map-get($screen, "tablet-hd") - 120px);
-//     }
-// }
-// @media(min-width:map-get($screen, "desktop-sd")){
-//     .center-wrapper{
-//         width: calc(map-get($screen, "desktop-sd") - 120px);
-//     }
-// }
+
 @media(min-width:map-get($screen, "desktop-hd")){
     .center-wrapper{
             margin: 0 160px;
