@@ -69,7 +69,6 @@ body {
 .center-wrapper {
   margin: 0 60px;
   min-width: 315px;
-  max-width: 1600px;
 }
 
 .header {
@@ -122,7 +121,8 @@ body {
 }
 @media (min-width: 1920px) {
   .center-wrapper {
-    margin: 0 160px;
+    margin: 0 auto;
+    max-width: 1600px;
   }
 }
 .services-header {
@@ -428,7 +428,7 @@ body {
     padding-bottom: 60px;
   }
   .trust-wrapper {
-    margin: 0 100px;
+    margin: 0 auto;
     max-width: 1720px;
   }
   .trust-block-child-hillel {
