@@ -69,7 +69,7 @@ body {
 .center-wrapper {
   margin: 0 60px;
   min-width: 315px;
-  max-width: 100%;
+  max-width: 1600px;
 }
 
 .header {
@@ -429,6 +429,7 @@ body {
   }
   .trust-wrapper {
     margin: 0 100px;
+    max-width: 1720px;
   }
   .trust-block-child-hillel {
     border-radius: 12px 0 0 0;
