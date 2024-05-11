@@ -160,7 +160,7 @@
     
     .trust{
         &-block{     
-            grid-template-columns: repeat(4, minmax(300px, 1fr));
+            grid-template-columns: repeat(4, minmax(220px, 1fr));
             grid-template-rows: repeat(3, 120px);  
         }
     }

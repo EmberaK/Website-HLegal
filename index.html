@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="site Hlegal">
+    <meta name="description" content="Hlegal site">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./css/style.css">
+    
 
-    <title>Document</title>
+    <title>Hlegal</title>
 </head>
 <body>
     <header class="header">
@@ -99,12 +101,29 @@
             <div class="center-wrapper sliders-wrapper">
                 <div class="sliders-box">
                     <div class="sliders-box-image">
-                        <div class="sliders-box-image-inner">
-                            <picture>
-                                <source srcset="./images/person-mobile.avif" type="image/avif">
-                                <img src="./images/person-mobile.jpg" alt="">
-                            </picture>
-                        </div>                            
+                        <picture>
+                            <!-- desktop-hd -->
+                            <source media="(min-width: 1920px)" srcset="./images/person-desktop-hd.avif 1x, ./images/person-desktop-hd@2x.avif 2x, ./images/person-desktop-hd@3x.avif 3x," type="image/avif">
+                            <source media="(min-width: 1920px)" srcset="./images/person-desktop-hd.webp 1x, ./images/person-desktop-hd@2x.webp 2x, ./images/person-desktop-hd@3x.webp 3x," type="image/webp">
+                            <source media="(min-width: 1920px)" srcset="./images/person-desktop-hd.jpg 1x, ./images/person-desktop-hd@2x.jpg 2x, ./images/person-desktop-hd@3x.jpg 3x," type="image/jpeg">
+                            <!-- desktop-sd -->
+                            <source media="(min-width: 1440px)" srcset="./images/person-desktop-sd.avif 1x, ./images/person-desktop-sd@2x.avif 2x, ./images/person-desktop-sd@3x.avif 3x," type="image/avif">
+                            <source media="(min-width: 1440px)" srcset="./images/person-desktop-sd.webp 1x, ./images/person-desktop-sd@2x.webp 2x, ./images/person-desktop-sd@3x.webp 3x," type="image/webp">
+                            <source media="(min-width: 1440px)" srcset="./images/person-desktop-sd.jpg 1x, ./images/person-desktop-sd@2x.jpg 2x, ./images/person-desktop-sd@3x.jpg 3x," type="image/jpeg">
+                            <!-- tablet-hd -->
+                            <source media="(min-width: 1024px)" srcset="./images/person-tablet-hd.avif 1x, ./images/person-tablet-hd@2x.avif 2x, ./images/person-tablet-hd@3x.avif 3x," type="image/avif">
+                            <source media="(min-width: 1024px)" srcset="./images/person-tablet-hd.webp 1x, ./images/person-tablet-hd@2x.webp 2x, ./images/person-tablet-hd@3x.webp 3x," type="image/webp">
+                            <source media="(min-width: 1024px)" srcset="./images/person-tablet-hd.jpg 1x, ./images/person-tablet-hd@2x.jpg 2x, ./images/person-tablet-hd@3x.jpg 3x," type="image/jpeg">
+                            <!-- tablet-sd -->
+                            <source media="(min-width: 768px)" srcset="./images/person-tablet-sd.avif 1x, ./images/person-tablet-sd@2x.avif 2x, ./images/person-tablet-sd@3x.avif 3x," type="image/avif">
+                            <source media="(min-width: 768px)" srcset="./images/person-tablet-sd.webp 1x, ./images/person-tablet-sd@2x.webp 2x, ./images/person-tablet-sd@3x.webp 3x," type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./images/person-tablet-sd.jpg 1x, ./images/person-tablet-sd@2x.jpg 2x, ./images/person-tablet-sd@3x.jpg 3x," type="image/jpeg">
+                            <!-- mobile -->
+                            <source srcset="./images/person-mobile.avif 1x, ./images/person-mobile@2x.avif 2x, ./images/person-mobile@3x.avif 3x," type="image/avif">
+                            <source srcset="./images/person-mobile.webp 1x, ./images/person-mobile@2x.webp 2x, ./images/person-mobile@3x.webp 3x," type="image/webp">
+                            <source srcset="./images/person-mobile.jpg 1x, ./images/person-mobile@2x.jpg 2x, ./images/person-mobile@3x.jpg 3x," type="image/jpeg">
+                            <img src="./images/person-mobile.jpg" alt="person">
+                        </picture>                            
                     </div>
                     <div class="sliders-box-content">
                         <div class="sliders-box-content-header">
@@ -195,7 +214,14 @@
                 <div class="publications-box">
                     <div class="publications-box-item">
                         <div class="publications-box-item-image">
-                            <div class="publications-box-item-image-inner publications-box-item-image-inner-computers"></div>                            
+                            <div class="publications-box-item-image-inner">
+                                <picture>
+                                    <source srcset="./images/computers.avif 1x, ./images/computers@2x.avif 2x, ./images/computers@3x.avif 3x," type="image/avif">
+                                    <source srcset="./images/computers.webp 1x, ./images/computers@2x.webp 2x, ./images/computers@3x.webp 3x," type="image/webp">
+                                    <source srcset="./images/computers.jpg 1x, ./images/computers@2x.jpg 2x, ./images/computers3x.jpg 3x," type="image/jpeg">
+                                    <img src="./images/computers.jpg" alt="computers">
+                                </picture>
+                            </div>                            
                         </div>
                         <div class="publications-box-item-details">
                             <h4 class="publications-box-item-details-heading">
@@ -214,7 +240,14 @@
                     </div>
                     <div class="publications-box-item">
                         <div class="publications-box-item-image">
-                            <div class="publications-box-item-image-inner publications-box-item-image-inner-gdpr"></div>                            
+                            <div class="publications-box-item-image-inner">
+                                <picture>
+                                    <source srcset="./images/gdpr.avif 1x, ./images/gdpr@2x.avif 2x, ./images/gdpr@3x.avif 3x," type="image/avif">
+                                    <source srcset="./images/gdpr.webp 1x, ./images/gdpr@2x.webp 2x, ./images/gdpr@3x.webp 3x," type="image/webp">
+                                    <source srcset="./images/gdpr.jpg 1x, ./images/gdpr@2x.jpg 2x, ./images/gdpr.jpg 3x," type="image/jpeg">
+                                    <img src="./images/gdpr.jpg" alt="computers">
+                                </picture>
+                            </div>                            
                         </div>
                         <div class="publications-box-item-details">
                             <h4 class="publications-box-item-details-heading">
@@ -227,12 +260,18 @@
                             <p class="publications-box-item-details-more">
                                 And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
                             </p>
-                    
                         </div>
                     </div>
                     <div class="publications-box-item publications-box-item-people">
                         <div class="publications-box-item-image">
-                            <div class="publications-box-item-image-inner publications-box-item-image-inner-people"></div>                            
+                            <div class="publications-box-item-image-inner">
+                                <picture>
+                                    <source srcset="./images/people.avif 1x, ./images/people@2x.avif 2x, ./images/people@3x.avif 3x," type="image/avif">
+                                    <source srcset="./images/people.webp 1x, ./images/people@2x.webp 2x, ./images/people@3x.webp 3x," type="image/webp">
+                                    <source srcset="./images/people.jpg 1x, ./images/people@2x.jpg 2x, ./images/people.jpg 3x," type="image/jpeg">
+                                    <img src="./images/people.jpg" alt="computers">
+                                </picture>
+                            </div>
                         </div>
                         <div class="publications-box-item-details">
                             <h4 class="publications-box-item-details-heading">

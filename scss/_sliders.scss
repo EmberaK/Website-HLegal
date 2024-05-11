@@ -10,21 +10,21 @@
     &-box{
         display: grid;
         border-radius: 12px;
-        &-image{
+        &-image {
             display: flex;
             position: relative;
             width: 100%;
             height: 500px;
-            &-inner{
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                background-image: url(../images/person.png);
-                background-position: center;
-                background-size: cover;
-            }
+                picture > * {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                }
         }
         &-content{
             display: grid;

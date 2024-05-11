@@ -208,15 +208,15 @@ body {
   width: 100%;
   height: 500px;
 }
-.sliders-box-image-inner {
+.sliders-box-image picture > * {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../images/person.png);
-  background-position: center;
-  background-size: cover;
 }
 .sliders-box-content {
   display: grid;
@@ -419,7 +419,7 @@ body {
 }
 @media (min-width: 1024px) {
   .trust-block {
-    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
     grid-template-rows: repeat(3, 120px);
   }
 }
@@ -487,14 +487,10 @@ body {
   background-position: center;
   background-size: cover;
 }
-.publications-box-item-image-inner-computers {
-  background-image: url(../images/publication/computers.png);
-}
-.publications-box-item-image-inner-gdpr {
-  background-image: url(../images/publication/gdpr.png);
-}
-.publications-box-item-image-inner-people {
-  background-image: url(../images/publication/people.png);
+.publications-box-item-image-inner picture > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .publications-box-item-details {
   display: flex;
