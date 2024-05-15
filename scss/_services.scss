@@ -2,6 +2,7 @@
 
 
 .services{
+    padding-bottom: 60px;
 
     &-header {
         margin-bottom: 30px;
@@ -30,9 +31,9 @@
                 border-radius: 24px;
                 background: $background-color-basic;
 
-                img{
-                    width: 64px;
-                    height: 64px;
+                &-item{
+                    font-size: 64px;
+                    @include gradient-pink-font;
                 }
             }
 

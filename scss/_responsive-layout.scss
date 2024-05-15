@@ -17,7 +17,6 @@ body{
 
 .header{
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%) no-repeat;
-    padding-bottom: 60px;
     border-radius: 0px 0px 12px 12px;
 }
 
@@ -28,39 +27,33 @@ body{
 }
 
 
-.link-content{
-    display: inline-block;
+.link-content {
+    display: flex;
+    gap: 2px;
+    align-items: center;
     margin-bottom: 30px;
     text-decoration: none;
     color: $font-color-regular;
     @include section-heading-small;
-    &-sliders{
+    &:hover {
+        color: $font-color-hover;
+        .link-content-arrow-right path {
+            stroke: $font-color-hover;
+        }
+    }
+    &-sliders {
         margin-bottom: 0;
     }
-
-    &-arrow-right{
-        width: 12px;
-        height: 12px;  
-        &-pink{
-            display: none;
-        }
-    }
-
-    &:hover{
-        color: $font-color-hover;
-
-        .link-content-arrow-right{
-            &-blue{
-                display: none;
-            }
-            &-pink{
-                display: inline-block;
+    &-arrow-right {
+        transform: rotate(-90deg);
+        path {
+            stroke: $font-color-regular;
+            &:hover {
+                stroke: $font-color-hover;
             }
         }
-
     }
 }
-
 
 @media(min-width: map-get($screen, "tablet-sd")){
     .content{

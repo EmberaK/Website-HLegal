@@ -1,0 +1,105 @@
+@import 'variables-and-mixins';
+
+.information{
+    padding: 30px 0;
+    background-color: rgba(245, 245, 250, 1);
+    &-point{
+        display: none;
+        background-color: $font-color-grey;
+        width: 6px;
+        height: 6px;
+        border: 1px solid transparent;
+        border-radius: 50px;
+    }
+    &-line{
+        height: 2px;
+        width: 100%;
+        background-color: $font-color-grey-sperator;
+        margin-bottom: 30px;
+    }
+    &-more{
+        margin: 0 auto;
+        &-adress{
+            color: $font-color-trust-heading;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 21px;
+            &-description{
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                color: $font-color-trust-heading;
+            }
+            &-map{
+                text-decoration: none;
+                color: $font-color-regular;
+                @include inner-section-heading-extra-small;
+            }
+        }
+        &-description{
+            color: $font-color-grey;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            &-top{
+                display: none;
+            }
+            &-down{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    &-contacts{ 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+        &-icon{
+            text-decoration: none;
+            font-size: 38px;
+            color: $font-color-regular;
+        }
+        &-telephone{
+            text-decoration: none;
+            color: rgba(70, 70, 110, 1);
+            @include inner-section-heading-small;
+        }
+        &-mail{
+            text-decoration: none;
+            color: $font-color-regular;
+            @include inner-section-heading-small;
+        }
+    }
+}
+
+@media (min-width: map-get($screen, "tablet-sd")){
+    .information{
+        &-point{
+            display: inline-block;
+        }
+        &-more{
+            display: flex;
+            justify-content: space-between;
+            &-adress{
+                gap: 10px;
+                flex-direction: row;
+            }
+            &-description{
+                &-top{
+                    display: inline-block;
+                }
+                &-down{
+                    display: none;
+                }
+            }
+        }
+        &-contacts{
+            flex-direction: row;
+            margin-bottom: 0;
+        }
+    }
+}

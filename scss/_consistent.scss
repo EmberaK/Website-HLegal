@@ -1,0 +1,95 @@
+@import 'variables-and-mixins';
+.consistent{
+    padding: 30px 0;
+    &-wrapper{
+        max-width: 1360px;
+    }
+    &-navigation{
+        overflow-x: auto;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        &-inner{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .consistent-navigation-inner-latouy{
+                flex-shrink: 0;
+            }
+            &-latouy{
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                &-link{
+                    text-decoration: none;
+                    color: $font-color-grey;
+                    @include section-heading-big;
+                    &-active{
+                        @include gradient-pink-font;
+                    }
+                    &:hover{
+                        color: $font-color-hover;
+                    }
+                }
+            }
+        }
+    }
+    &-box{
+        &-heading{
+            @include inner-section-heading-medium;
+            color: $background-color-basic;
+            margin-bottom: 30px;
+        }
+        &-description{
+            @include inner-section-paragraph-small;
+            color: $background-color-basic;
+        }
+    }
+}
+@media (min-width: map-get($screen, "tablet-sd")){
+    .consistent{
+        padding: 60px 0;
+        &-navigation{
+            padding-bottom: 60px;
+            margin-bottom: 60px;
+        }
+    }
+}
+@media (min-width: map-get($screen, "tablet-hd")){
+    .consistent{
+        &-wrapper{
+            display: grid;
+            grid-template-columns: 375px 4px 1fr;
+            gap: 60px;
+        }
+        &-navigation{
+            padding-bottom: 0;
+            margin-bottom: 0;
+            &-inner{
+                align-items: end;
+                flex-direction: column;
+                &-latouy{
+                    flex-direction: column;
+                    &-link{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        &-line{
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        &-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+@media (min-width: map-get($screen, "desktop-sd")){
+    .consistent{
+        .center-wrapper{
+            margin: 0 auto;
+        }
+    }
+}
