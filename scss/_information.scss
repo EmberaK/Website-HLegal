@@ -34,6 +34,7 @@
             }
             &-map{
                 text-decoration: none;
+                text-transform: uppercase;
                 color: $font-color-regular;
                 @include inner-section-heading-extra-small;
             }

@@ -695,6 +695,7 @@ body {
 }
 .information-more-adress-map {
   text-decoration: none;
+  text-transform: uppercase;
   color: rgb(36, 163, 255);
   font-size: 12px;
   font-weight: 700;
