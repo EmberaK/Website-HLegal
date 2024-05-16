@@ -176,7 +176,7 @@ body {
 }
 .consistent-line {
   background-color: rgba(255, 255, 255, 0.3);
-  height: 2px;
+  height: 4px;
   width: 100%;
 }
 .consistent-line-top {
