@@ -1,13 +1,22 @@
 @import 'variables-and-mixins';
 .consistent{
     padding: 30px 0;
-    &-wrapper{
-        max-width: 1360px;
+    &-inner{
+        &-box{
+            &-down{
+                .consistent{
+                    &-line{
+                        margin: 30px 0;
+                    }
+                }
+            }
+        }
     }
     &-navigation{
         overflow-x: auto;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
         &-inner{
             display: flex;
             flex-direction: row;
@@ -29,8 +38,22 @@
                     &:hover{
                         color: $font-color-hover;
                     }
+                    &:first-child{
+                        padding-left: 30px;
+                    }
+                    &:last-child{
+                        padding-right: 30px;
+                    }
                 }
             }
+        }
+    }
+    &-line{
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 2px;
+        width: 100%;
+        &-top{
+            display: none;
         }
     }
     &-box{
@@ -43,20 +66,34 @@
             @include inner-section-paragraph-small;
             color: $background-color-basic;
         }
+        &-top{
+            display: none;
+        }
     }
 }
 @media (min-width: map-get($screen, "tablet-sd")){
     .consistent{
         padding: 60px 0;
         &-navigation{
-            padding-bottom: 60px;
-            margin-bottom: 60px;
+            &-inner{
+                &-latouy{
+                    &-link{
+                        &:first-child{
+                            padding-left: 60px;
+                        }
+                        &:last-child{
+                            padding-right: 60px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 @media (min-width: map-get($screen, "tablet-hd")){
     .consistent{
         &-wrapper{
+            margin: 0 60px;
             display: grid;
             grid-template-columns: 375px 4px 1fr;
             gap: 60px;
@@ -71,6 +108,12 @@
                     flex-direction: column;
                     &-link{
                         text-align: right;
+                        &:first-child{
+                            padding-left: 0;
+                        }
+                        &:last-child{
+                            padding-right: 0;
+                        }
                     }
                 }
             }
@@ -78,18 +121,38 @@
         &-line{
             height: 100%;
             background-color: rgba(255, 255, 255, 0.3);
+            &-top{
+                display: inline-block;
+            }
         }
         &-box{
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
+        &-inner{
+            &-box{
+                &-down{
+                    display: none;
+                }
+            }
+        }
     }
 }
 @media (min-width: map-get($screen, "desktop-sd")){
     .consistent{
-        .center-wrapper{
-            margin: 0 auto;
+        &-wrapper{
+            margin: 0 180px;
         }
     }
 }
+@media (min-width: map-get($screen, "desktop-hd")){
+    .consistent{
+        &-wrapper{
+            margin: 0 auto;
+            max-width: 1360px;
+
+        }
+    }
+}
+

@@ -11,7 +11,7 @@ body{
 }
 
 .center-wrapper{
-    margin: 0 60px;
+    margin: 0 30px;
     min-width: 315px;
 }
 
@@ -58,6 +58,9 @@ body{
 @media(min-width: map-get($screen, "tablet-sd")){
     .content{
         margin-top: 60px;
+    }
+    .center-wrapper{
+        margin: 0 60px;
     }
 }
 
