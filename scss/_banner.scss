@@ -11,7 +11,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    &__header__container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 
     &__center-container {
         margin: 0 15px;
