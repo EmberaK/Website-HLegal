@@ -3,6 +3,21 @@
 
 .services{
     padding-bottom: 60px;
+    &::after,
+    &::before{
+        content: '';
+        display: block;
+        height: 10px;
+        width: 100%;
+    }
+    &::before{
+        background-color: $background-color-shadow-grey;
+        margin: 0 20px;
+    }
+    &::after{
+        background-color: $background-color-shadow-grey-light;
+        margin: 0 40px;
+    }
 
     &-header {
         margin-bottom: 30px;

@@ -3,14 +3,6 @@
 .information{
     padding: 30px 0;
     background-color: rgba(245, 245, 250, 1);
-    &-point{
-        display: none;
-        background-color: $font-color-grey;
-        width: 6px;
-        height: 6px;
-        border: 1px solid transparent;
-        border-radius: 50px;
-    }
     &-line{
         height: 2px;
         width: 100%;
@@ -25,8 +17,8 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+            gap: 10px;
             &-description{
-                margin-bottom: 10px;
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 20px;
@@ -80,13 +72,12 @@
 @media (min-width: map-get($screen, "tablet-sd")){
     .information{
         &-point{
-            display: inline-block;
+            @include grey-point;
         }
         &-more{
             display: flex;
             justify-content: space-between;
             &-adress{
-                gap: 10px;
                 flex-direction: row;
             }
             &-description{

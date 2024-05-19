@@ -102,6 +102,11 @@ $background-color-ultimate-card: rgba(0, 0, 0, 1);
     font-weight: 400;
     line-height: 22px;
 }
+@mixin inner-section-paragraph-big-small{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
 
 
 @mixin gradient-pink-font{
@@ -134,4 +139,12 @@ $background-color-ultimate-card: rgba(0, 0, 0, 1);
     display: grid;
     justify-content: center;
     align-content: center;
+}
+
+@mixin grey-point{
+    background-color: $font-color-grey;
+    width: 6px;
+    height: 6px;
+    border: 1px solid transparent;
+    border-radius: 50px;
 }
