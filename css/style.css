@@ -152,7 +152,6 @@ body {
 .banner {
   position: relative;
   min-height: 100vh;
-  max-width: 1600px;
   margin: 0 auto;
   background-image: url(../images/hlegal-background.svg);
   background-size: cover;
@@ -404,6 +403,8 @@ body {
   }
   .banner__box {
     margin-top: 16px;
+    display: flex;
+    align-items: end;
   }
   .banner__hero-box {
     padding: 0;
@@ -413,6 +414,12 @@ body {
   }
   .banner__box__content__hlegal__tablet-hd {
     display: inline-block;
+  }
+}
+@media (min-width: 1720px) {
+  .banner__header__container-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1920px) {

@@ -4,7 +4,6 @@
 .banner {
     position: relative;
     min-height: 100vh;
-    max-width: 1600px;
 
     margin: 0 auto;
     background-image: url(../images/hlegal-background.svg);
@@ -258,6 +257,8 @@
         }
         &__box{
             margin-top: 16px;
+            display: flex;
+            align-items: end;
         }
         &__hero-box{
             padding: 0;
@@ -268,6 +269,13 @@
                 display: inline-block;
             }
         }
+    }
+}
+
+@media (min-width: 1720px){
+    .banner__header__container-wrapper{
+        max-width: 1600px;
+        margin: 0 auto;
     }
 }
 
